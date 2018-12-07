@@ -1,0 +1,78 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "iam:UpdateLoginProfile",
+                "iam:CreateLoginProfile",
+                "iam:CreateServiceSpecificCredential",
+                "iam:AddUserToGroup",
+                "iam:CreateUser",
+                "iam:GetLoginProfile",
+                "iam:DeleteLoginProfile",
+                "iam:ChangePassword"
+            ],
+            "Resource": [
+                "arn:aws:iam::929292782238:user/*",
+                "arn:aws:iam::*:group/BasicUser",
+                "arn:aws:iam::*:group/S3Readers"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "iam:GetAccountPasswordPolicy",
+                "iam:DeleteAccessKey",
+                "iam:GenerateServiceLastAccessedDetails",
+                "iam:ListPoliciesGrantingServiceAccess",
+                "iam:ListServiceSpecificCredentials",
+                "iam:ListMFADevices",
+                "iam:GetServiceLastAccessedDetails",
+                "iam:ListVirtualMFADevices",
+                "iam:CreateAccessKey",
+                "iam:ListInstanceProfilesForRole",
+                "iam:ListSSHPublicKeys",
+                "iam:ListAttachedRolePolicies",
+                "iam:ListAttachedUserPolicies",
+                "iam:ListAttachedGroupPolicies",
+                "iam:ListRolePolicies",
+                "iam:GetAccountAuthorizationDetails",
+                "iam:ListAccessKeys",
+                "iam:ListPolicies",
+                "iam:ListGroupPolicies",
+                "iam:GetAccessKeyLastUsed",
+                "iam:ListEntitiesForPolicy",
+                "iam:ListRoles",
+                "iam:UpdateAccessKey",
+                "iam:ListUserPolicies",
+                "iam:ListInstanceProfiles",
+                "iam:ListPolicyVersions",
+                "iam:UpdateAccountPasswordPolicy",
+                "iam:GetUserPolicy",
+                "iam:ListGroupsForUser",
+                "iam:ListAccountAliases",
+                "iam:ListUsers",
+                "iam:ListGroups",
+                "iam:GetUser",
+                "iam:GetLoginProfile",
+                "iam:GetAccountSummary"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Deny",
+            "Action": [
+                "iam:DeletePolicy",
+                "iam:DeleteUserPermissionsBoundary",
+                "iam:CreatePolicyVersion",
+                "iam:DeletePolicyVersion",
+                "iam:SetDefaultPolicyVersion"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
