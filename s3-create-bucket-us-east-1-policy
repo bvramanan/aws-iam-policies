@@ -1,0 +1,25 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Deny",
+            "Action": "s3:CreateBucket",
+            "Resource": "*",
+            "Condition": {
+                "StringEqualsIgnoreCase": {
+                    "aws:RequestedRegion": "us-east-1"
+                },
+                "StringNotEquals": {
+                    "aws:username": [
+                        "david.lin",
+                        "james.bond",
+                        "joe.montana",
+                        "will.clark",
+                        "rodney.mullen"
+                    ]
+                }
+            }
+        }
+    ]
+}
