@@ -1,5 +1,6 @@
-# aws-iam-policies
-Ad-hoc AWS IAM Policies
+# Ad-hoc AWS IAM Policies
+
+This repo is a collection of ad-hoc IAM policies for special use cases.
 
 | Policy Name | Description |
 |-------------|-------------|
