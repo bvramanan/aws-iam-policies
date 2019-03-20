@@ -1,0 +1,18 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "MyEC2AutoscalingPolicy",
+            "Effect": "Allow",
+            "Action": [
+                "autoscaling:CompleteLifecycleAction"
+            ],
+            "Resource": "arn:aws:autoscaling:us-east-1:929292782238:autoScalingGroup:*:*",
+            "Condition": {
+                "StringLikeIfExists": {
+                    "autoscaling:LaunchConfigurationName": "Cloud Pipeline*"
+                }
+            }
+        }
+    ]
+}
